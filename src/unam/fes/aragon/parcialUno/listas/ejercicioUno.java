@@ -4,26 +4,27 @@ import java.util.Random;
 
 public class ejercicioUno {
     public static void main(String[] args) {
-        ListaSimple<Integer> lista=new ListaSimple<>();
-        Textos outp=new Textos("Listas.csv");
-        Random r=new Random();
-        for (int i = 0; i < 10000; i++) {
-            lista.agregarEnCola(r.nextInt(1,301));
+        ListaSimple<Integer> lista = new ListaSimple<>();
+        manejoArchivos archivo = new manejoArchivos("Listas.csv");
+        Random numeroAñadido = new Random();
+
+        for (int i=0; i<10000; i++) {
+            lista.agregarEnCola(numeroAñadido.nextInt(1,301));
         }
-        lista.imprimirLista();
-        System.out.println("Longitud "+lista.getLongitud());
-        StringBuilder cadena=new StringBuilder();
-        for (int i=1;i<=lista.getLongitud();i++){
+
+        StringBuilder cadena = new StringBuilder();
+
+        for (int i=1; i<=lista.getLongitud(); i++){
             cadena.append(lista.obtenerNodo(i-1));
             if (i<lista.getLongitud()){
-                cadena.append(", ");
+                cadena.append(",");
             }
             if ((i%1000)==0&&i!=0){
                 cadena.append("\n");
             }
         }
         String resultado=cadena.toString();
-        outp.guardarTxt(resultado);
+        archivo.guardarTxt(resultado);
     }
 
 }

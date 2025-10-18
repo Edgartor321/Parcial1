@@ -4,10 +4,10 @@ import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
 import java.io.*;
 
-public class Textos {
+public class manejoArchivos {
     private String ruta;
 
-    public Textos(String ruta_absoluta) {
+    public manejoArchivos(String ruta_absoluta) {
         this.ruta=ruta_absoluta;
     }
 
