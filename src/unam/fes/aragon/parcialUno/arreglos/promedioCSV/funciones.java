@@ -1,4 +1,4 @@
-package unam.fes.aragon.parcialUno.arreglos;
+package unam.fes.aragon.parcialUno.arreglos.promedioCSV;
 
 public interface funciones{
 	public void insertar (Integer x, Integer[] l) throws Exception;

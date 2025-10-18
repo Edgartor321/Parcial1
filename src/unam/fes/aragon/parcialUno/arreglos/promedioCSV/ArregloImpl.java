@@ -1,6 +1,6 @@
-package unam.fes.aragon.parcialUno.arreglos;
+package unam.fes.aragon.parcialUno.arreglos.promedioCSV;
 
-public class ArregloImpl implements funciones{
+public class ArregloImpl implements funciones {
 	private int posicion_actual=0;
     private Integer temp;
 	

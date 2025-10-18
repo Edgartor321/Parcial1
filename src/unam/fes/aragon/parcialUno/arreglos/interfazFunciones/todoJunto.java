@@ -1,4 +1,4 @@
-package unam.fes.aragon.parcialUno.arreglos;
+package unam.fes.aragon.parcialUno.arreglos.interfazFunciones;
 
 public class todoJunto {
     public static void main(String[] args){
