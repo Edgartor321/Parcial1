@@ -1,6 +1,6 @@
-package unam.fes.aragon.parcialUno.arreglos.interfazFunciones;
+package unam.fes.aragon.parcialUno.arreglos.interfazfunciones;
 
-public interface funciones{
+public interface Funciones{
 	public void insertar (Integer x, Integer[] l) throws Exception;
 	public int localiza(Integer x, Integer[] l) throws Exception;
 	public Integer recupera (int p, Integer[] l) throws Exception;

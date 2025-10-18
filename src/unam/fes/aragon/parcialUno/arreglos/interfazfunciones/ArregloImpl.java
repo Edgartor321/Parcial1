@@ -1,6 +1,6 @@
-package unam.fes.aragon.parcialUno.arreglos.interfazFunciones;
+package unam.fes.aragon.parcialUno.arreglos.interfazfunciones;
 
-public class ArregloImpl implements funciones{
+public class ArregloImpl implements Funciones{
 	private int posicion_actual=0;
     private Integer temp;
 	

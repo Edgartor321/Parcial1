@@ -2,11 +2,11 @@ package unam.fes.aragon.parcialUno.listas;
 
 import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
-public class ejercicioDos {
+public class EjercicioDos {
     public static void main(String[] args) {
-        manejoArchivos entrada = new manejoArchivos("Listas.csv");
+        ManejoArchivos entrada = new ManejoArchivos("Listas.csv");
         ListaSimple<Integer> numeros = new ListaSimple<>();
-        numeros = entrada.leerTxt();
+        numeros = entrada.leerArchivo();
         ListaSimple<Integer> rango=new ListaSimple<>();
 
         for (int i = 0; i < numeros.getLongitud(); i++){
@@ -15,8 +15,8 @@ public class ejercicioDos {
             }
         }
 
-        ListaSimple<Integer> unicos=new ListaSimple<>();
-        ListaSimple<Integer> frecuencias=new ListaSimple<>();
+        ListaSimple<Integer> unicos = new ListaSimple<>();
+        ListaSimple<Integer> frecuencias = new ListaSimple<>();
 
         for (int i = 0; i < rango.getLongitud(); i++) {
             int indice=unicos.localizar(rango.obtenerNodo(i));

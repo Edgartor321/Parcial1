@@ -1,11 +1,11 @@
 package unam.fes.aragon.parcialUno.arreglos.promedioCSV;
 
-import unam.fes.aragon.parcialUno.arreglos.interfazFunciones.ArregloImpl;
+import unam.fes.aragon.parcialUno.arreglos.interfazfunciones.ArregloImpl;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class promedio {
+public class Promedio {
     public static void main(String[] args){
         Integer[] l = new Integer[10000];
         float promedio=0;
