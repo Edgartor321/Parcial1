@@ -1,5 +1,7 @@
 package unam.fes.aragon.parcialUno.arreglos.promedioCSV;
 
+import unam.fes.aragon.parcialUno.arreglos.interfazFunciones.ArregloImpl;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 
