@@ -15,7 +15,7 @@ public class promedio {
         Integer valorActual;
 
         try{
-            archivo = new FileReader("Datos.csv");
+            archivo = new FileReader("src/unam/fes/aragon/parcialUno/arreglos/promedioCSV/Datos.csv");
             lector= new BufferedReader(archivo);
             while((cadena = lector.readLine()) != null){
                 //Division de la cadena
