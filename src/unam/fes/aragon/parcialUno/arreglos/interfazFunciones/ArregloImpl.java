@@ -30,7 +30,7 @@ public class ArregloImpl implements funciones{
 	@Override
 	public Integer recupera (int p, Integer[] l) throws Exception {
 		if(p<l.length && p>=0){
-			System.out.println(l[p]);
+			//System.out.println(l[p]);
             return l[p];
 		}else{
 			throw new Exception("Esa posicion está fuera de las dimensiones de la lista");
