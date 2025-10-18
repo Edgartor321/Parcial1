@@ -4,7 +4,7 @@ import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
 public class ejercicioDos {
     public static void main(String[] args) {
-        Textos entrada=new Textos("Listas.csv");
+        manejoArchivos entrada=new manejoArchivos("Listas.csv");
         ListaSimple<Integer> numros=new ListaSimple<>();
         numros=entrada.leerTxt();
         ListaSimple<Integer> rango=new ListaSimple<>();
