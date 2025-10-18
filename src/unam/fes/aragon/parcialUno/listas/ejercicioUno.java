@@ -26,5 +26,4 @@ public class ejercicioUno {
         String resultado=cadena.toString();
         archivo.guardarTxt(resultado);
     }
-
 }

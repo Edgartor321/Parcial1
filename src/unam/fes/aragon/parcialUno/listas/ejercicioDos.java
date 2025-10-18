@@ -4,15 +4,17 @@ import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
 public class ejercicioDos {
     public static void main(String[] args) {
-        manejoArchivos entrada=new manejoArchivos("Listas.csv");
-        ListaSimple<Integer> numros=new ListaSimple<>();
-        numros=entrada.leerTxt();
+        manejoArchivos entrada = new manejoArchivos("Listas.csv");
+        ListaSimple<Integer> numeros = new ListaSimple<>();
+        numeros = entrada.leerTxt();
         ListaSimple<Integer> rango=new ListaSimple<>();
-        for (int i = 0; i < numros.getLongitud(); i++){
-            if (numros.obtenerNodo(i)>=30&&numros.obtenerNodo(i) <=150){
-                rango.agregarEnCola(numros.obtenerNodo(i));
+
+        for (int i = 0; i < numeros.getLongitud(); i++){
+            if (numeros.obtenerNodo(i)>=30&& numeros.obtenerNodo(i) <=150){
+                rango.agregarEnCola(numeros.obtenerNodo(i));
             }
         }
+
         ListaSimple<Integer> unicos=new ListaSimple<>();
         ListaSimple<Integer> frecuencias=new ListaSimple<>();
 
@@ -28,7 +30,7 @@ public class ejercicioDos {
         }
         System.out.println("Encontrados: "+rango.getLongitud());
         System.out.println("Frecuencias:");
-        System.out.println(" #   | Frec");
+        System.out.println(" #  | Frec");
         for (int i=0;i<unicos.getLongitud();i++){
             System.out.println(unicos.obtenerNodo(i)+" : "+frecuencias.obtenerNodo(i));
         }
