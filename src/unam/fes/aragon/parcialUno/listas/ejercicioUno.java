@@ -19,7 +19,7 @@ public class ejercicioUno {
             if (i<lista.getLongitud()){
                 cadena.append(",");
             }
-            if ((i%1000)==0&&i!=0){
+            if ((i%1000) == 0 && i!=0){
                 cadena.append("\n");
             }
         }
