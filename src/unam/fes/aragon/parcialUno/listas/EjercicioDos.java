@@ -8,32 +8,34 @@ public class EjercicioDos {
         ListaSimple<Integer> numeros = new ListaSimple<>();
         numeros = entrada.leerArchivo();
         ListaSimple<Integer> rango=new ListaSimple<>();
+        int cantidadRepeticiones, numeroActual;
 
         for (int i = 0; i < numeros.getLongitud(); i++){
-            if (numeros.obtenerNodo(i)>=30&& numeros.obtenerNodo(i) <=150){
+            if (numeros.obtenerNodo(i) >= 30 && numeros.obtenerNodo(i) <= 150){
                 rango.agregarEnCola(numeros.obtenerNodo(i));
             }
         }
 
-        ListaSimple<Integer> unicos = new ListaSimple<>();
-        ListaSimple<Integer> frecuencias = new ListaSimple<>();
+        if(entrada.archivoExiste("Reporte.txt")){
+            entrada.borrarArchivo("Reporte.txt");
+        }
 
-        for (int i = 0; i < rango.getLongitud(); i++) {
-            int indice=unicos.localizar(rango.obtenerNodo(i));
-            if (indice==-1){
-                unicos.agregarEnCola(rango.obtenerNodo(i));
-                frecuencias.agregarEnCola(1);
-            }else {
-                frecuencias.insertarEnIndice(frecuencias.obtenerNodo(indice)+1,indice);
+        entrada.escribirEnArchivo("Reporte.txt", "REPORTE\n");
+        entrada.escribirEnArchivo("Reporte.txt", "Cantidad de repeticiones de los números del 30 al 150 en el archivo \"Listas.csv\"");
+
+        for(int i = 0; i < rango.getLongitud(); i++){
+            if(rango.obtenerNodo(i) != null){
+                numeroActual = rango.obtenerNodo(i);
+                cantidadRepeticiones = 1;
+                for(int j = i+1; j < rango.getLongitud(); j++){
+                    if(rango.obtenerNodo(j) != null && rango.obtenerNodo(j) == numeroActual){
+                        cantidadRepeticiones++;
+                        rango.asignar(null, j);
+                    }
+                }
+                entrada.escribirEnArchivo("Reporte.txt", "\n");
+                entrada.escribirEnArchivo("Reporte.txt", Integer.toString(numeroActual) + " : " + Integer.toString(cantidadRepeticiones));
             }
-
         }
-        System.out.println("Encontrados: "+rango.getLongitud());
-        System.out.println("Frecuencias:");
-        System.out.println(" #  | Frec");
-        for (int i=0;i<unicos.getLongitud();i++){
-            System.out.println(unicos.obtenerNodo(i)+" : "+frecuencias.obtenerNodo(i));
-        }
-        System.out.println("FIn de la busqueda");
     }
 }
