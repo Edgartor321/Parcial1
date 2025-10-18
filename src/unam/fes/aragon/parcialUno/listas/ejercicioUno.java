@@ -1,11 +1,11 @@
-package unam.fes.aragon.parcial1;
+package unam.fes.aragon.parcialUno.listas;
 import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 import java.util.Random;
 
-public class Uno {
+public class ejercicioUno {
     public static void main(String[] args) {
         ListaSimple<Integer> lista=new ListaSimple<>();
-        Textos outp=new Textos("src/Datos.csv");
+        Textos outp=new Textos("src/Listas.csv");
         Random r=new Random();
         for (int i = 0; i < 10000; i++) {
             lista.agregarEnCola(r.nextInt(1,301));

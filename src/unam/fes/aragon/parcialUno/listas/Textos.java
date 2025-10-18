@@ -1,4 +1,4 @@
-package unam.fes.aragon.parcial1;
+package unam.fes.aragon.parcialUno.listas;
 
 import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 

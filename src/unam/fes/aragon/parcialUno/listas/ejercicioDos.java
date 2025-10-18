@@ -1,8 +1,8 @@
-package unam.fes.aragon.parcial1;
+package unam.fes.aragon.parcialUno.listas;
 
 import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
-public class Dos {
+public class ejercicioDos {
     public static void main(String[] args) {
         Textos entrada=new Textos("src/Datos.csv");
         ListaSimple<Integer> numros=new ListaSimple<>();
