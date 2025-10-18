@@ -4,14 +4,14 @@ import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
 
 import java.io.*;
 
-public class manejoArchivos {
+public class ManejoArchivos <E>{
     private String ruta;
 
-    public manejoArchivos(String ruta_absoluta) {
+    public ManejoArchivos(String ruta_absoluta) {
         this.ruta=ruta_absoluta;
     }
 
-    public void guardarTxt(String escritura){
+    public void guardarArchivo(String escritura){
         try (BufferedWriter modificar=new BufferedWriter(new FileWriter(this.ruta))){
             modificar.write(escritura);
         }catch (IOException e){
@@ -19,7 +19,7 @@ public class manejoArchivos {
         }
     }
 
-    public ListaSimple<Integer> leerTxt(){
+    public ListaSimple<Integer> leerArchivo(){
         ListaSimple<Integer> numeros=new ListaSimple<>();
         try (BufferedReader lector=new BufferedReader(new FileReader(this.ruta))){
             String linea;
@@ -38,5 +38,27 @@ public class manejoArchivos {
             System.out.println(e.getMessage());
         }
         return numeros;
+    }
+
+    public void escribirEnArchivo(String nombreArchivo, E dato){
+        File archivo = new File(nombreArchivo);
+
+        try{
+            PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
+            salida.print(dato);
+            salida.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean archivoExiste(String nombreArchivo){
+        File archivo = new File(nombreArchivo);
+        return archivo.exists();
+    }
+
+    public void borrarArchivo(String nombreArchivo){
+        File archivo = new File (nombreArchivo);
+        archivo.delete();
     }
 }
