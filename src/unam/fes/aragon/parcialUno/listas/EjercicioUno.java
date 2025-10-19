@@ -27,19 +27,5 @@ public class EjercicioUno {
                 }
             }
         }
-
-//        StringBuilder cadena = new StringBuilder();
-//
-//        for (int i=1; i<=lista.getLongitud(); i++){
-//            cadena.append(lista.obtenerNodo(i-1));
-//            if (i<lista.getLongitud()){
-//                cadena.append(",");
-//            }
-//            if ((i%1000) == 0 && i!=0){
-//                cadena.append("\n");
-//            }
-//        }
-//        String resultado=cadena.toString();
-//        archivo.guardarArchivo(resultado);
     }
 }
