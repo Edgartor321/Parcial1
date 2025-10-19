@@ -1,4 +1,4 @@
-package unam.fes.aragon.parcialUno.arreglos.promedioCSV;
+package unam.fes.aragon.parcialUno.arreglos.promediocsv;
 
 import unam.fes.aragon.parcialUno.arreglos.interfazfunciones.ArregloImpl;
 
