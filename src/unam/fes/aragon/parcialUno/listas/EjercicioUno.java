@@ -5,25 +5,41 @@ import java.util.Random;
 public class EjercicioUno {
     public static void main(String[] args) {
         ListaSimple<Integer> lista = new ListaSimple<>();
-        ManejoArchivos archivo = new ManejoArchivos("Listas.csv");
-        Random numeroAñadido = new Random();
+        ManejoArchivos<String> archivo = new ManejoArchivos("Listas.csv");
+        Random numeroAleatorio = new Random();
 
         for (int i=0; i<10000; i++) {
-            lista.agregarEnCola(numeroAñadido.nextInt(1,301));
+            lista.agregarEnCola(numeroAleatorio.nextInt(1,301));
         }
 
-        StringBuilder cadena = new StringBuilder();
+        if(archivo.archivoExiste("Listas.csv")){
+            archivo.borrarArchivo("Listas.csv");
+        }
 
-        for (int i=1; i<=lista.getLongitud(); i++){
-            cadena.append(lista.obtenerNodo(i-1));
-            if (i<lista.getLongitud()){
-                cadena.append(",");
-            }
-            if ((i%1000) == 0 && i!=0){
-                cadena.append("\n");
+        for(int i=0; i<10000; i++){
+            String añadidoCSV = Integer.toString(lista.obtenerNodo(i));
+            archivo.escribirEnArchivo("Listas.csv", añadidoCSV);
+            if((i+1) < 10000){
+                if((i+1) % 1000 == 0){
+                    archivo.escribirEnArchivo("Listas.csv", "\n");
+                }else{
+                    archivo.escribirEnArchivo("Listas.csv", ",");
+                }
             }
         }
-        String resultado=cadena.toString();
-        archivo.guardarArchivo(resultado);
+
+//        StringBuilder cadena = new StringBuilder();
+//
+//        for (int i=1; i<=lista.getLongitud(); i++){
+//            cadena.append(lista.obtenerNodo(i-1));
+//            if (i<lista.getLongitud()){
+//                cadena.append(",");
+//            }
+//            if ((i%1000) == 0 && i!=0){
+//                cadena.append("\n");
+//            }
+//        }
+//        String resultado=cadena.toString();
+//        archivo.guardarArchivo(resultado);
     }
 }
