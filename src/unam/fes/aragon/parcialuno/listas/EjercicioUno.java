@@ -1,5 +1,5 @@
-package unam.fes.aragon.parcialUno.listas;
-import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
+package unam.fes.aragon.parcialuno.listas;
+import unam.fes.aragon.dinamicas.listasimple.ListaSimple;
 import java.util.Random;
 
 public class EjercicioUno {

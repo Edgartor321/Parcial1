@@ -1,6 +1,6 @@
-package unam.fes.aragon.parcialUno.listas;
+package unam.fes.aragon.parcialuno.listas;
 
-import unam.fes.aragon.dinamicas.listaSimple.ListaSimple;
+import unam.fes.aragon.dinamicas.listasimple.ListaSimple;
 
 public class EjercicioDos {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package unam.fes.aragon.parcialUno.arreglos.interfazfunciones;
+package unam.fes.aragon.parcialuno.arreglos.interfazfunciones;
 
 public interface Funciones{
 	public void insertar (Integer x, Integer[] l) throws Exception;

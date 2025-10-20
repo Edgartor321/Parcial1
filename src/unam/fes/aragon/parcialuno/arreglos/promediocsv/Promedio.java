@@ -1,6 +1,6 @@
-package unam.fes.aragon.parcialUno.arreglos.promediocsv;
+package unam.fes.aragon.parcialuno.arreglos.promediocsv;
 
-import unam.fes.aragon.parcialUno.arreglos.interfazfunciones.ArregloImpl;
+import unam.fes.aragon.parcialuno.arreglos.interfazfunciones.ArregloImpl;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
